@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-  Верстка
+  <div class="content ">
+    <div class="wrapper">
+      <h1 class="main-title">Weather sound</h1>
+      <ul class="list">
+        <li class="list__item list__item_sun"></li>
+        <li class="list__item list__item_rain"></li>
+        <li class="list__item list__item_snow"></li>
+      </ul>
+      <input type="range" id="volume" name="volume" min="0" max="1" value="1" step="0.1" class="input-volume-range"/>
+    </div>
+    <div class="bg-content__content">
+      <div class="bg-content__item bg-content__item_sun active"></div>
+      <div class="bg-content__item bg-content__item_rain"></div>
+      <div class="bg-content__item bg-content__item_snow"></div>
+    </div>
+  </div>
 </body>
 </html>
