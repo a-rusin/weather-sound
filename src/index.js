@@ -9,7 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
   listItems.forEach((item) => {
     item.addEventListener("click", () => {
       const itemAtr = item.getAttribute("data-list-item");
-      if (itemAtr) {
+      const sound = document.querySelector(`.sound__item_${itemAtr}`);
+
+      if (sound && !sound.paused && sound.currentTime > 0) {
+        sound.pause();
+      } else if (sound && sound.paused && sound.currentTime > 0) {
+        sound.play();
+      } else {
         playSound(itemAtr);
         changeBG(itemAtr);
       }
@@ -18,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function playSound(atr) {
     stopAllSounds();
-    const music = document.querySelector(`.sound__item_${atr}`);
-    music.play();
+    const sound = document.querySelector(`.sound__item_${atr}`);
+    sound.play();
   }
 
   function changeBG(atr) {
