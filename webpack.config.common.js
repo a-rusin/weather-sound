@@ -22,6 +22,10 @@ module.exports = {
           from: path.resolve(__dirname, "public/favicon.ico"),
           to: path.resolve(__dirname, "dist"),
         },
+        {
+          from: path.resolve(__dirname, "public/assets/"),
+          to: path.resolve(__dirname, "dist/assets"),
+        },
       ],
     }),
   ],
@@ -38,6 +42,10 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(mp3|wav|ogg)$/i,
         type: "asset/resource",
       },
     ],
