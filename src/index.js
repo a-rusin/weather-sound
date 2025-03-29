@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const soundItems = document.querySelectorAll(".sound__item");
   const listItems = document.querySelectorAll(".list__item");
   const bgItems = document.querySelectorAll(".bg-content__item");
+  const volumeRage = document.querySelector(".input-volume-range");
 
   listItems.forEach((item) => {
     item.addEventListener("click", () => {
@@ -34,10 +35,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function stopAllSounds() {
-    soundItems.forEach((audio) => {
-      console.log(audio);
-      audio.pause();
-      audio.currentTime = 0;
+    soundItems.forEach((sound) => {
+      sound.pause();
+      sound.currentTime = 0;
+    });
+  }
+
+  volumeRage.addEventListener("input", () => {
+    const value = +volumeRage.value;
+    changeSoundVolume(value);
+  });
+
+  function changeSoundVolume(value) {
+    soundItems.forEach((sound) => {
+      sound.volume = value;
     });
   }
 });
