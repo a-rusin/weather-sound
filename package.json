@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/a-rusin/weather-sound#readme",
   "devDependencies": {
+    "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
