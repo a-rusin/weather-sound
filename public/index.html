@@ -11,9 +11,9 @@
     <div class="wrapper">
       <h1 class="main-title">Weather sound</h1>
       <ul class="list">
-        <li class="list__item list__item_sun"></li>
-        <li class="list__item list__item_rain"></li>
-        <li class="list__item list__item_snow"></li>
+        <li class="list__item list__item_sun" data-list-item="sun"></li>
+        <li class="list__item list__item_rain" data-list-item="rain"></li>
+        <li class="list__item list__item_snow" data-list-item="snow"></li>
       </ul>
       <input type="range" id="volume" name="volume" min="0" max="1" value="1" step="0.1" class="input-volume-range"/>
     </div>
@@ -23,5 +23,14 @@
       <div class="bg-content__item bg-content__item_snow"></div>
     </div>
   </div>
+  <audio class="sound__item sound__item_sun">
+    <source src="./assets/sounds/summer.mp3" type="audio/mpeg">
+  </audio>
+  <audio class="sound__item sound__item_rain">
+    <source src="./assets/sounds/rain.mp3" type="audio/mpeg">
+  </audio>
+  <audio class="sound__item sound__item_snow">
+    <source src="./assets/sounds/winter.mp3" type="audio/mpeg">
+  </audio>
 </body>
 </html>
